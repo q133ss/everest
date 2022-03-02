@@ -24,6 +24,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         return view('admin.index');
     })->name('index');
 
-    Route::resource('section_cat', App\Http\Controllers\admin\SectionCat::class);
+    Route::resource('section_cat', App\Http\Controllers\Admin\SectionCatController::class);
+    Route::resource('section', App\Http\Controllers\Admin\SectionController::class);
 
 });
