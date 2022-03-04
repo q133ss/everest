@@ -75,29 +75,43 @@
                     <li class="menu-title">Секции</li>
                     <li>
                         <a href="{{route('admin.section_cat.index')}}">
-                            <i class="fi-air-play"></i><span> Категории секций </span>
+                            <i class="mdi mdi-collage"></i><span> Категории секций </span>
                         </a>
                     </li>
 
                     <li>
                         <a href="{{route('admin.section.index')}}">
-                            <i class="fi-air-play"></i><span> Секции </span>
+                            <i class="mdi mdi-dumbbell"></i><span> Секции </span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="javascript: void(0);" class=""><i class="mdi mdi-account-multiple"></i> <span> Тренеры </span> <span class="menu-arrow"></span></a>
-                        <ul class="nav-second-level" aria-expanded="false">
-                            <li><a href="apps-calendar.html">Calendar</a></li>
-                            <li><a href="apps-tickets.html">Tickets</a></li>
-                            <li><a href="apps-taskboard.html">Task Board</a></li>
-                            <li><a href="apps-task-detail.html">Task Detail</a></li>
-                            <li><a href="apps-contacts.html">Contacts</a></li>
-                            <li><a href="apps-projects.html">Projects</a></li>
-                            <li><a href="apps-companies.html">Companies</a></li>
-                            <li><a href="apps-file-manager.html">File Manager</a></li>
-                        </ul>
+                        <a href="#">
+                            <i class="mdi mdi-human-greeting"></i><span> Тренеры </span>
+                        </a>
                     </li>
+
+                    <li class="menu-title">Настройки</li>
+
+                    <li>
+                        <a href="#">
+                            <i class="mdi mdi-settings"></i><span> Настройки </span>
+                        </a>
+                    </li>
+
+{{--                    <li>--}}
+{{--                        <a href="javascript: void(0);" class=""><i class="mdi mdi-account-multiple"></i> <span> Тренеры </span> <span class="menu-arrow"></span></a>--}}
+{{--                        <ul class="nav-second-level" aria-expanded="false">--}}
+{{--                            <li><a href="apps-calendar.html">Calendar</a></li>--}}
+{{--                            <li><a href="apps-tickets.html">Tickets</a></li>--}}
+{{--                            <li><a href="apps-taskboard.html">Task Board</a></li>--}}
+{{--                            <li><a href="apps-task-detail.html">Task Detail</a></li>--}}
+{{--                            <li><a href="apps-contacts.html">Contacts</a></li>--}}
+{{--                            <li><a href="apps-projects.html">Projects</a></li>--}}
+{{--                            <li><a href="apps-companies.html">Companies</a></li>--}}
+{{--                            <li><a href="apps-file-manager.html">File Manager</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
 
                 </ul>
 

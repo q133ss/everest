@@ -1,9 +1,9 @@
 @extends('layouts.admin')
-@section('title', 'Изменить категорию секции')
+@section('title', 'Создать новость')
 @section('content')
     <div class="card">
         <div class="card-body">
-            <form action="{{route('admin.section.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('admin.news.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group col-md-6">
                     <label for="inputEmail4" class="col-form-label">Изображение</label>
@@ -21,14 +21,8 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label for="inputEmail6" class="col-form-label">Полное описание</label>
-                    <textarea name="description" class="form-control" cols="30" rows="10"></textarea>
-                </div>
-
-
-                <div class="form-group col-md-6">
-                    <label for="inputEmail6" class="col-form-label">Баннер</label>
-                    <input name="banner" class="form-control" type="file">
+                    <label for="inputEmail6" class="col-form-label">Текст</label>
+                    <textarea name="text" class="form-control" cols="30" rows="10"></textarea>
                 </div>
 
                 <div class="form-group col-md-6">

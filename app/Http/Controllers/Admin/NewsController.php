@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class NewsController extends Controller
 {
@@ -14,7 +15,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = 1;
+        $news = Post::paginate();
         return view('admin.news.index', compact('news'));
     }
 
@@ -25,7 +26,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.news.create');
     }
 
     /**
@@ -36,7 +37,33 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post();
+
+        if($request->title != NULL){
+            $post->title = $request->title;
+        }else{
+            return redirect()->back()->withError('Введите название');
+        }
+
+        if($request->excerpt != NULL){
+            $post->excerpt = $request->excerpt;
+        }else{
+            return redirect()->back()->withError('Введите краткое описание');
+        }
+        if($request->text != NULL) {
+            $post->text = $request->text;
+        }else{
+            return redirect()->back()->withError('Введите текст');
+        }
+        if($request->hasFile('img')){
+            $image = $request->file('img');
+            $image_path = $image->store('uploads', 'public');
+            $post->img = '/storage/'.$image_path;
+        }else{
+            return redirect()->back()->withError('Выберите изображение');
+        }
+        $post->save();
+        return to_route('admin.news.index')->withSuccess('Новость создана!');
     }
 
     /**
@@ -58,7 +85,8 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('admin.news.edit', compact('post'));
     }
 
     /**
@@ -70,7 +98,18 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($id);
+        $post->title = $request->title;
+        $post->excerpt = $request->excerpt;
+        $post->text = $request->text;
+        if($request->hasFile('img')){
+            $image = $request->file('img');
+            $image_path = $image->store('uploads', 'public');
+            $post->img = '/storage/'.$image_path;
+        }
+
+        $post->save();
+        return to_route('admin.news.index')->withSuccess('Новость изменена!');
     }
 
     /**
@@ -81,6 +120,8 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+        return to_route('admin.news.index')->withError('Новость удалена!');
     }
 }
