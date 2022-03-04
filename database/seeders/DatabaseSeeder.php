@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Day;
 use App\Models\Time;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {

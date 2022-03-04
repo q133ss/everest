@@ -14,17 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
+Route::get('/test', function (){
+    $days = App\Models\Day::get();
+    $times = App\Models\Time::get();
+    return view('test', compact('days','times'));
+});
 
-
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.' , 'middleware' => 'role:admin'], function () {
     Route::get('/', function (){
         return view('admin.index');
     })->name('index');
 
     Route::resource('section_cat', App\Http\Controllers\Admin\SectionCatController::class);
     Route::resource('section', App\Http\Controllers\Admin\SectionController::class);
+    Route::resource('news', App\Http\Controllers\Admin\NewsController::class);
 
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

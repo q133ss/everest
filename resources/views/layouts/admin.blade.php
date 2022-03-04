@@ -65,6 +65,13 @@
                             <i class="fi-air-play"></i><span> Главная </span>
                         </a>
                     </li>
+
+                    <li>
+                        <a href="{{route('admin.news.index')}}">
+                            <i class="mdi mdi-newspaper"></i><span> Новости </span>
+                        </a>
+                    </li>
+
                     <li class="menu-title">Секции</li>
                     <li>
                         <a href="{{route('admin.section_cat.index')}}">

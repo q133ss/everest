@@ -21,6 +21,14 @@ return new class extends Migration
             $table->unsignedBigInteger('week_id'); //Неделя для календаря
             $table->unsignedBigInteger('day_id');
             $table->unsignedBigInteger('time_id');
+
+
+            $table->foreign('section_id')->references('id')->on('sections');
+            //$table->foreign('trainer_id')->references('id')->on('trainers');
+            $table->foreign('week_id')->references('id')->on('weeks');
+            $table->foreign('day_id')->references('id')->on('days');
+            $table->foreign('time_id')->references('id')->on('times');
+
             $table->timestamps();
         });
     }
