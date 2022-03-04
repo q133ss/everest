@@ -62,6 +62,15 @@ class NewsController extends Controller
         }else{
             return redirect()->back()->withError('Выберите изображение');
         }
+
+        if($request->hasFile('banner')){
+            $image = $request->file('banner');
+            $image_path = $image->store('uploads', 'public');
+            $post->banner = '/storage/'.$image_path;
+        }else{
+            return redirect()->back()->withError('Выберите баннер');
+        }
+
         $post->save();
         return to_route('admin.news.index')->withSuccess('Новость создана!');
     }
@@ -106,6 +115,12 @@ class NewsController extends Controller
             $image = $request->file('img');
             $image_path = $image->store('uploads', 'public');
             $post->img = '/storage/'.$image_path;
+        }
+
+        if($request->hasFile('banner')){
+            $image = $request->file('banner');
+            $image_path = $image->store('uploads', 'public');
+            $post->banner = '/storage/'.$image_path;
         }
 
         $post->save();

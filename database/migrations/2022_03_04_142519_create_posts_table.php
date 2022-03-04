@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('img');
             $table->string('excerpt');
-            $table->string('text');
+            $table->text('text');
+            $table->string('banner');
             $table->timestamps();
         });
     }
