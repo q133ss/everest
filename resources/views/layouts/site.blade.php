@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/assets/css/bundle.min.css">
     <link rel="stylesheet" href="/assets/css/vendors.min.css">
     <link rel="stylesheet" href="/assets/css/style.min.css">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body class="page page--index">
@@ -40,37 +42,37 @@
                             </svg>
                         </button>
                         <ul class="menu nav__menu">
-                            <li class="current">
-                                <a href="/about.html">О клубе</a>
+                            <li>
+                                <a href="{{route('about.index')}}">О клубе</a>
                             </li>
                             <li class="menu-dropdown">
                                 <a href="#">Направления</a>
                                 <ul>
                                     <li>
-                                        <a href="/assets/directions-solo.html">Единоборства</a>
+                                        <a href="{{route('solo')}}">Единоборства</a>
                                     </li>
                                     <li>
-                                        <a href="/assets/directions-group.html">Групповые тренировки</a>
+                                        <a href="{{route('group')}}">Групповые тренировки</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="/assets/coaches.html">Тренеры</a>
+                                <a href="{{route('trainer.index')}}">Тренеры</a>
                             </li>
                             <li>
-                                <a href="/assets/articles.html">Новости и анонсы</a>
+                                <a href="{{route('news.index')}}">Новости и анонсы</a>
                             </li>
                             <li>
-                                <a href="/assets/schedule.html">Рассписание</a>
+                                <a href="{{route('schedule')}}">Рассписание</a>
                             </li>
                             <li>
-                                <a href="/assets/prices.html">Стоимость</a>
+                                <a href="{{route('price.index')}}">Стоимость</a>
                             </li>
                             <li>
-                                <a href="/assets/shop.html">Магазин</a>
+                                <a href="{{route('shop.index')}}">Магазин</a>
                             </li>
                             <li>
-                                <a href="/assets/contacts.html">Контакты</a>
+                                <a href="{{route('contact.index')}}">Контакты</a>
                             </li>
                         </ul>
                         <div class="nav__contacts">
@@ -175,20 +177,21 @@
             <p class="modal__subtitle">Мы презвоним вам для уточнения деталей</p>
             <form class="form form-modal modal__form" action="#" method="POST">
                 <label class="form-field">
-                    <input class="form-field__input" type="text" name="name" placeholder="Имя" required>
+                    <input class="form-field__input" id="order_name" type="text" name="name" placeholder="Имя" required>
                     <span class="form-field__placeholder">имя</span>
                 </label>
                 <label class="form-field">
-                    <input class="form-field__input" type="text" name="phone" placeholder="номер телефона" required>
+                    <input class="form-field__input" id="order_phone" type="text" name="phone" placeholder="номер телефона" required>
                     <span class="form-field__placeholder">номер телефона</span>
                 </label>
                 <label class="form-field">
-                    <input class="form-field__input" type="text" name="name" placeholder="комментарий" required>
+                    <input class="form-field__input" id="order_comment" type="text" name="name" placeholder="комментарий" required>
                     <span class="form-field__placeholder">коментарий <span>(необязательно)</span>
             </span>
                 </label>
+                <input type="hidden" id="order_type" value="">
                 <div class="form-modal__btns">
-                    <button class="button form-modal__submit" type="submit">Отправить</button>
+                    <button class="button form-modal__submit" type="button" onclick="new_order($('#order_name').val(),$('#order_phone').val(),$('#order_comment').val(), $('#order_type').val())">Отправить</button>
                     <a class="button button--outline form-modal__call" href="tel:79213333840">Позвонить</a>
                     <a class="form-modal__privacy" href="/assets/policy.html">Политика конфедициальности</a>
                 </div>
@@ -197,7 +200,43 @@
     </div>
 </div>
 <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-<script src="/assets/js/main.min.js"></script>
+{{--<script src="/assets/js/main.min.js"></script>--}}
+<script src="/assets/js/my.js"></script>
+<script>
+    function new_order(name,phone,comment,type){
+        $.ajax({
+            url: '{{route('orders.new')}}',
+            type: "POST",
+            data: {
+                name:name,
+                phone:phone,
+                comment:comment,
+                type:type
+            },
+            headers:{
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: (data) => {
+                console.log(data)
+                $('.modal__close').click()
+            },
+            error: function(request, status, error) {
+               alert(statusCode = request.responseText);
+            }
+        });
+    }
+
+    $(".nav__content .nav__menu li a").each(function () {
+        var location2 = window.location.protocol + '//' + window.location.host + window.location.pathname;
+        var link = this.href;
+        if(link == location2){
+            $(this).parent().addClass('current');
+            $(this).parent().parent().parent().addClass('active');
+
+        }
+    });
+</script>
+@yield('js')
 </body>
 
 </html>

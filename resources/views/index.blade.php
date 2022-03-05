@@ -15,10 +15,10 @@
                     <p>В нашем клубе есть все, что нужно для эффективных тренировок — опытные тренеры, современные тренажеры и дружная атмосфера.</p>
                 </div>
                 <div class="hero__btns">
-                    <button class="button hero__btn-request" data-open-modal="request">Записаться на тренировку</button>
-                    <a class="button button--outline hero__btn-about" href="/assets/about.html">О клубе</a>
+                    <button class="button hero__btn-request" data-open-modal="request" onclick="$('#order_type').val('Заявка с главной')">Записаться на тренировку</button>
+                    <a class="button button--outline hero__btn-about" href="{{route('about.index')}}">О клубе</a>
                 </div>
-                <a class="hero__scroll" href="/assets/#we-have">
+                <a class="hero__scroll" href="#we-have">
                     <svg width="24" height="35" viewBox="0 0 24 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 8L12 19L23 8" stroke="white" stroke-opacity="0.5" stroke-width="1.2" />
                         <path d="M1 1L12 12L23 1" stroke="white" stroke-opacity="0.2" stroke-width="1.2" />
@@ -150,7 +150,7 @@
             <h2 class="section-title sport-clubs__title">Секции</h2>
             <ul class="sport-clubs__list">
                 <li class="sport-clubs__item">
-                    <a class="sport-clubs-card" href="/assets/directions-group.html">
+                    <a class="sport-clubs-card" href="{{route('group')}}">
                         <div class="sport-clubs-card__img">
                             <img src="/assets/img/sport-clubs-01.jpg" alt="" aria-hidden="true">
                         </div>
@@ -158,7 +158,7 @@
                     </a>
                 </li>
                 <li class="sport-clubs__item">
-                    <a class="sport-clubs-card" href="/assets/directions-solo.html">
+                    <a class="sport-clubs-card" href="{{route('solo')}}">
                         <div class="sport-clubs-card__img">
                             <img src="/assets/img/sport-clubs-02.jpg" alt="" aria-hidden="true">
                         </div>
@@ -183,8 +183,7 @@
                 </a>
             </div>
             <div class="instagram__box">
-                <iframe src="//lightwidget.com/widgets/2dc1950f76e35375878e6b13eb1b4b88.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-            </div>
+                <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/2c587bed8d31532d918d79ae82fb5291.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>            </div>
         </div>
     </section>
 @endsection

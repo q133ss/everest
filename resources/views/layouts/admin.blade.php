@@ -67,6 +67,12 @@
                     </li>
 
                     <li>
+                        <a href="{{route('admin.orders')}}">
+                            <i class="fi-air-play"></i><span> Заявки </span>
+                        </a>
+                    </li>
+
+                    <li>
                         <a href="{{route('admin.news.index')}}">
                             <i class="mdi mdi-newspaper"></i><span> Новости </span>
                         </a>
