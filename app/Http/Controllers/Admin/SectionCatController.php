@@ -51,7 +51,7 @@ class SectionCatController extends Controller
             return redirect()->back()->withError('Выберите изображение');
         }
         $section->save();
-        return to_route('admin.sections.section_cat.index')->withSuccess('Категория успешно создана');
+        return to_route('admin.section_cat.index')->withSuccess('Категория успешно создана');
     }
 
     /**
@@ -98,7 +98,7 @@ class SectionCatController extends Controller
             $cat->img = '/storage/'.$image_path;
         }
         $cat->save();
-        return to_route('admin.sections.section_cat.index')->withSuccess('Категория успешно изменина');
+        return to_route('admin.section_cat.index')->withSuccess('Категория успешно изменина');
     }
 
     /**
@@ -111,6 +111,6 @@ class SectionCatController extends Controller
     {
         $cat = SectionCategory::find($id);
         $cat->delete();
-        return to_route('admin.sections.section_cat.index')->withSuccess('Категория удалена!');
+        return to_route('admin.section_cat.index')->withSuccess('Категория удалена!');
     }
 }

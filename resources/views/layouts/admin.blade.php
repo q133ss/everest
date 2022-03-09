@@ -92,8 +92,22 @@
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="{{route('admin.trainer.index')}}">
                             <i class="mdi mdi-human-greeting"></i><span> Тренеры </span>
+                        </a>
+                    </li>
+
+                    <li class="menu-title">Расписание</li>
+
+                    <li>
+                        <a href="#">
+                            <i class="mdi mdi-calendar-blank"></i><span> Недели </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="mdi mdi-calendar-text"></i><span> Расписание </span>
                         </a>
                     </li>
 

@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('excerpt');
             $table->text('description');
             $table->string('banner')->nullable();
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('section_categories');
             $table->timestamps();
         });
     }

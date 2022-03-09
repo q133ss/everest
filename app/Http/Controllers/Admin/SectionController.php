@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Section;
+use App\Models\SectionCategory;
 
 class SectionController extends Controller
 {
@@ -26,7 +27,8 @@ class SectionController extends Controller
      */
     public function create()
     {
-        return view('admin.sections.sections.create');
+        $categories = SectionCategory::get();
+        return view('admin.sections.sections.create', compact('categories'));
     }
 
     /**
@@ -67,6 +69,7 @@ class SectionController extends Controller
         }else{
             return redirect()->back()->withError('Выберите баннер');
         }
+        $section->category_id = $request->category;
         $section->save();
         return to_route('admin.section.index')->withSuccess('Секция успешно создана!');
     }
@@ -91,7 +94,8 @@ class SectionController extends Controller
     public function edit($id)
     {
         $section = Section::find($id);
-        return view('admin.sections.sections.edit',compact('section'));
+        $categories = SectionCategory::get();
+        return view('admin.sections.sections.edit',compact('section', 'categories'));
     }
 
     /**
@@ -130,7 +134,7 @@ class SectionController extends Controller
             $image_path = $image->store('uploads', 'public');
             $section->banner = '/storage/'.$image_path;
         }
-
+        $section->category_id = $request->category;
         $section->save();
 
         return to_route('admin.section.index')->withSuccess('Секция успешно обновлена!');

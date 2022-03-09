@@ -11,6 +11,15 @@
                 </div>
 
                 <div class="form-group col-md-6">
+                    <label for="inputEmail4" class="col-form-label">Категория</label>
+                    <select name="category" class="form-control">
+                        @foreach($categories as $category)
+                        <option value="{{$category->id}}">{{$category->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="form-group col-md-6">
                     <label for="inputEmail5" class="col-form-label">Название</label>
                     <input type="text" name="title" class="form-control" id="inputEmail5">
                 </div>

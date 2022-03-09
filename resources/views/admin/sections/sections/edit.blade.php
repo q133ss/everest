@@ -12,6 +12,15 @@
                 </div>
 
                 <div class="form-group col-md-6">
+                    <label for="inputEmail4" class="col-form-label">Категория</label>
+                    <select name="category" class="form-control">
+                        @foreach($categories as $category)
+                            <option value="{{$category->id}}" @if($category->id == $section->category_id) selected @endif>{{$category->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="form-group col-md-6">
                     <label for="inputEmail4" class="col-form-label">Текущее</label>
                     <img width="100%" src="{{$section->img}}" alt="">
                 </div>

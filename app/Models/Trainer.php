@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SectionCategory extends Model
+class Trainer extends Model
 {
     use HasFactory;
 
-    public function get_sections(){
-        return $this->belongsTo(Section::class, 'id', 'category_id');
+    public function section(){
+        return $this->belongsTo(Section::class, 'section_id', 'id');
     }
 }
