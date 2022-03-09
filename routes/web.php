@@ -60,8 +60,10 @@ Route::get('/shop', [App\Http\Controllers\Front\ShopController::class, 'index'])
 Route::view('/contact', 'contact')->name('contact.index');
 Route::post('/order/new/', [App\Http\Controllers\Admin\OrderController::class, 'new'])->name('orders.new');
 Route::view('/single','solo')->name('solo');
+Route::get('/sections/{id}', [App\Http\Controllers\Front\SectionController::class, 'index'])->name('section.index');
 Route::view('/group','group')->name('group');
 Route::view('/schedule','schedule')->name('schedule');
+Route::view('/schedule/{trainer_id}','schedule')->name('schedule');
 Route::view('/policy', 'policy')->name('policy');
 Route::get('logout', function (){
         Auth::logout();

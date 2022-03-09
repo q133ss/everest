@@ -49,7 +49,7 @@
                     </li>
                     @endforeach
                 </ul>
-                @if($post->count >= 12)
+                @if($posts->count() >= 12)
                 {{$posts->links('pagination.index')}}
                 @endif
 

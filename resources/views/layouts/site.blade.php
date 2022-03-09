@@ -48,12 +48,17 @@
                             <li class="menu-dropdown">
                                 <a href="#">Направления</a>
                                 <ul>
+                                    @foreach($section_categories as $category)
                                     <li>
-                                        <a href="{{route('solo')}}">Единоборства</a>
+                                        <a href="{{route('section.index', $category->id)}}">{{$category->name}}</a>
                                     </li>
-                                    <li>
-                                        <a href="{{route('group')}}">Групповые тренировки</a>
-                                    </li>
+                                    @endforeach
+                                    {{--                                    <li>--}}
+{{--                                        <a href="{{route('solo')}}">Единоборства</a>--}}
+{{--                                    </li>--}}
+{{--                                    <li>--}}
+{{--                                        <a href="{{route('group')}}">Групповые тренировки</a>--}}
+{{--                                    </li>--}}
                                 </ul>
                             </li>
                             <li>

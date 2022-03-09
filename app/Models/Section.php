@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Section extends Model
 {
     use HasFactory;
+
+    public function category(){
+        return $this->belongsTo(SectionCategory::class, 'category_id');
+    }
 }

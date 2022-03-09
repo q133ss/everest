@@ -10,6 +10,6 @@ class SectionCategory extends Model
     use HasFactory;
 
     public function get_sections(){
-        return $this->belongsTo(Section::class, 'id', 'category_id');
+        return $this->hasMany(Section::class, 'category_id', 'id');
     }
 }
