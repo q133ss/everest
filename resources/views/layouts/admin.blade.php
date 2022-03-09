@@ -78,6 +78,20 @@
                         </a>
                     </li>
 
+
+                    <li>
+                        <a href="#">
+                            <i class="mdi mdi-book-open-variant"></i><span> Абонементы </span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#">
+                            <i class="mdi mdi-account-edit"></i><span> Вакансии </span>
+                        </a>
+                    </li>
+
                     <li class="menu-title">Секции</li>
                     <li>
                         <a href="{{route('admin.section_cat.index')}}">

@@ -29,7 +29,7 @@
                 </li>
             </ul>
             <form class="schedule-calendar">
-                <div class="schedule-calendar__filters">
+                <div class="schedule-calendar__filters" style="display: none;">
                     <div class="schedule-select">
                         <div class="schedule-select__top"> Направления </div>
                         <div class="schedule-select__body">
@@ -114,7 +114,7 @@
                     <div class="swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <p class="schedule-slider__date">
+                                <p class="schedule-slider__date" style="display: none;">
                                     <span>07 февраля</span> - <span>13 февраля</span>
                                 </p>
                                 <div class="schedule-slider__inner">
@@ -309,7 +309,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
+                        <!-- <div class="swiper-slide">
                                 <p class="schedule-slider__date">
                                     <span>07 февраля</span> - <span>13 февраля</span>
                                 </p>
@@ -484,10 +484,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
-                    <div class="swiper-navigation">
+                    <div class="swiper-navigation" style="display: none;">
                         <button type="button" class="schedule-slider__prev slider__prev slider__btn">
                             <svg class="icon">
                                 <use xlink:href="/assets/img/sprite.svg#chevron"></use>

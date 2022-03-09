@@ -49,7 +49,7 @@
                                     </div>
                                     <div class="coaches-item__btns">
                                         <button class="button coaches-item__request" onclick="$('#order_type').val('Запись к тренеру: Лысиков Даниил Артемьевич')" data-open-modal="request">Записаться</button>
-                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Рассписание</a>
+                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Расписание</a>
                                     </div>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                                     </div>
                                     <div class="coaches-item__btns">
                                         <button class="button coaches-item__request" data-open-modal="request" onclick="$('#order_type').val('Запись к тренеру: Атакишиев Имран Ильхамоглы')">Записаться</button>
-                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Рассписание</a>
+                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Расписание</a>
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +131,7 @@
                                     </div>
                                     <div class="coaches-item__btns">
                                         <button class="button coaches-item__request" onclick="$('#order_type').val('Запись к тренеру: Бойчев Сергей Иванович')" data-open-modal="request">Записаться</button>
-                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Рассписание</a>
+                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Расписание</a>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@
                         <div class="swiper-slide">
                             <div class="coaches-item">
                                 <div class="coaches-item__img">
-                                    <img src="/assets/img/coaches-04.png" alt="">
+                                    <img src="/assets/img/balashov.jpg" alt="">
                                 </div>
                                 <div class="coaches-item__info">
                                     <p class="coaches-item__name">Балашов Леонид Игоревич</p>
@@ -151,7 +151,7 @@
                                         <p class="coaches-item__point">Основные направления: кикбоксинг, рукопашный бой</p>
                                     </div>
                                     <div class="coaches-item__photo">
-                                        <img src="/assets/img/coaches-04.png" alt="">
+                                        <img src="/assets/img/balashov.jpg" alt="">
                                     </div>
                                     <div class="coaches-item__content">
                                         <div class="coaches-accordion" data-accordion="coaches">
@@ -171,7 +171,7 @@
                                     </div>
                                     <div class="coaches-item__btns">
                                         <button class="button coaches-item__request" onclick="$('#order_type').val('Запись к тренеру: Балашов Леонид Игоревич')" data-open-modal="request">Записаться</button>
-                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Рассписание</a>
+                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Расписание</a>
                                     </div>
                                 </div>
                             </div>
@@ -211,7 +211,7 @@
                                     </div>
                                     <div class="coaches-item__btns">
                                         <button class="button coaches-item__request" onclick="$('#order_type').val('Запись к тренеру: Сиренко Андрей Владиславович')" data-open-modal="request">Записаться</button>
-                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Рассписание</a>
+                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Расписание</a>
                                     </div>
                                 </div>
                             </div>
@@ -252,7 +252,7 @@
                                     </div>
                                     <div class="coaches-item__btns">
                                         <button class="button coaches-item__request" onclick="$('#order_type').val('Запись к тренеру: Сопин Михаил Евгеньевич')" data-open-modal="request">Записаться</button>
-                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Рассписание</a>
+                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Расписание</a>
                                     </div>
                                 </div>
                             </div>
@@ -265,53 +265,14 @@
                                 <div class="coaches-item__info">
                                     <p class="coaches-item__name">Щукин Анатолий Владимирович</p>
                                     <div class="coaches-item__inner">
-                                        <p class="coaches-item__point">Образование — Педагогический колледж фитнеса</p>
+										<p class="coaches-item__point">Обзразование — ГАОУ ВО ЛО «Ленинградский государственный университет им. А.С. Пушкина», педагогическое образование, факультет физической культуры</p>
                                         <p class="coaches-item__point">Квалификация — тренер по боксу</p>
-                                        <p class="coaches-item__point">Стаж - с 2015 г.</p>
-                                        <p class="coaches-item__point">Возрастная категория: взрослые</p>
-                                        <p class="coaches-item__point">Основные направления: силовой и функциональный тренинг в тренажёрном зале</p>
-                                    </div>
-                                    <div class="coaches-item__photo">
-                                        <img src="/assets/img/coaches-07.png" alt="">
-                                    </div>
-                                    <div class="coaches-item__content">
-                                        <div class="coaches-accordion" data-accordion="coaches">
-                                            <div class="coaches-accordion__top" data-accordion-top>
-                                                <p>Читать о тренере</p>
-                                            </div>
-                                            <div class="coaches-accordion__body" data-accordion-body>
-                                                <div class="coaches-accordion__body-content">
-                                                    <p>Профессиональные достижения:
-                                                        <br> - сертифицированный инструктор Animal Flow — фитнес-направление, совмещающее в себе элементы нескольких видов активностей: йоги, функционального тренинга, пилатеса, стрейтчинга, спортивной
-                                                        гимнастики, капоэйры и брейк-данса
-                                                        <br> Профессиональные навыки: снижение веса/набор массы, основы правильного питания, техника выполнения упражнений, реабилитация после травм и при наличии ограничений на тренировки
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="coaches-item__btns">
-                                        <button class="button coaches-item__request" onclick="$('#order_type').val('Запись к тренеру: Щукин Анатолий Владимирович')" data-open-modal="request">Записаться</button>
-                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Рассписание</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="coaches-item">
-                                <div class="coaches-item__img">
-                                    <img src="/assets/img/coaches-08.png" alt="">
-                                </div>
-                                <div class="coaches-item__info">
-                                    <p class="coaches-item__name">Егоров Олег Владимирович</p>
-                                    <div class="coaches-item__inner">
-                                        <p class="coaches-item__point">Квалификация — тренер по боксу</p>
-                                        <p class="coaches-item__point">Стаж - 9 лет</p>
+                                        <p class="coaches-item__point">Стаж - 6 лет</p>
                                         <p class="coaches-item__point">Возрастная категория: 7+, взрослые</p>
                                         <p class="coaches-item__point">Основные направления: Бокс</p>
                                     </div>
                                     <div class="coaches-item__photo">
-                                        <img src="/assets/img/coaches-08.png" alt="">
+                                        <img src="/assets/img/coaches-07.png" alt="">
                                     </div>
                                     <div class="coaches-item__content">
                                         <div class="coaches-accordion" data-accordion="coaches">
@@ -334,8 +295,48 @@
                                         </div>
                                     </div>
                                     <div class="coaches-item__btns">
+                                        <button class="button coaches-item__request" onclick="$('#order_type').val('Запись к тренеру: Щукин Анатолий Владимирович')" data-open-modal="request">Записаться</button>
+                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Расписание</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="coaches-item">
+                                <div class="coaches-item__img">
+                                    <img src="/assets/img/coaches-08.png" alt="">
+                                </div>
+                                <div class="coaches-item__info">
+                                    <p class="coaches-item__name">Егоров Олег Владимирович</p>
+                                    <div class="coaches-item__inner">
+                                        <p class="coaches-item__point">Образование — Педагогический колледж фитнеса</p>
+                                        <p class="coaches-item__point">Квалификация — персональный тренер тренажерного зала</p>
+                                        <p class="coaches-item__point">Стаж - с 2015 г.</p>
+                                        <p class="coaches-item__point">Возрастная категория: взрослые</p>
+                                        <p class="coaches-item__point">Основные направления: силовой и функциональный тренинг в тренажёрном зале</p>
+                                    </div>
+                                    <div class="coaches-item__photo">
+                                        <img src="/assets/img/coaches-08.png" alt="">
+                                    </div>
+                                    <div class="coaches-item__content">
+                                        <div class="coaches-accordion" data-accordion="coaches">
+                                            <div class="coaches-accordion__top" data-accordion-top>
+                                                <p>Читать о тренере</p>
+                                            </div>
+                                            <div class="coaches-accordion__body" data-accordion-body>
+                                                <div class="coaches-accordion__body-content">
+                                                    <p>Профессиональные достижения:
+                                                        <br> - сертифицированный инструктор Animal Flow — фитнес-направление, совмещающее в себе элементы нескольких видов активностей: йоги, функционального тренинга, пилатеса, стрейтчинга, спортивной
+                                                        гимнастики, капоэйры и брейк-данса
+                                                        <br> Профессиональные навыки: снижение веса/набор массы, основы правильного питания, техника выполнения упражнений, реабилитация после травм и при наличии ограничений на тренировки
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="coaches-item__btns">
                                         <button class="button coaches-item__request" onclick="$('#order_type').val('Запись к тренеру: Егоров Олег Владимирович')" data-open-modal="request">Записаться</button>
-                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Рассписание</a>
+                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Расписание</a>
                                     </div>
                                 </div>
                             </div>

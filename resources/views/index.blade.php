@@ -172,7 +172,7 @@
         <div class="container">
             <div class="instagram__top">
                 <h2 class="section-title instagram__title">Следите за жизнью клуба</h2>
-                <p class="instagram__subtitle">следите за нашими постами и сторис в инстаграм</p>
+                <!-- <p class="instagram__subtitle">следите за нашими постами и сторис в инстаграм</p> -->
                 <a class="contacts-item contacts-item--accent instagram__link" href="https://www.instagram.com/everest_sg/">
                     <span class="contacts-item__text">Перейти в профиль</span>
                     <span class="contacts-item__icon">

@@ -4,7 +4,7 @@
     <section class="page-section contacts">
         <div class="container">
             <h1 class="title contacts__title">Контакты</h1>
-            <p class="subtitle contacts__subtitle">Контакты и соц.сети</p>
+            <p class="subtitle contacts__subtitle">Связаться с нами</p>
             <div class="contacts__inner">
                 <div class="contacts__info">
                     <div class="group-contacts contacts__group">
@@ -32,12 +32,12 @@
                         <p class="group-contacts__title">e-mail:</p>
                         <div class="group-contacts__inner">
                             <a class="contacts-item" href="mailto:info@everest.ru">
-                    <span class="contacts-item__icon">
-                      <svg class="icon">
-                        <use xlink:href="/assets/img/sprite.svg#mail"></use>
-                      </svg>
-                    </span>
-                                <span class="contacts-item__text">info@everest.ru</span>
+								<span class="contacts-item__icon">
+								  <svg class="icon">
+									<use xlink:href="/assets/img/sprite.svg#mail"></use>
+								  </svg>
+								</span>
+                                <span class="contacts-item__text">everest-sg@yandex.ru</span>
                             </a>
                         </div>
                     </div>
@@ -45,7 +45,12 @@
                         <p class="group-contacts__title">Адрес:</p>
                         <div class="group-contacts__inner">
                             <p class="contacts-item">
-                                <span class="contacts-item__text">Пр. Ветеранов, д. 169, к. 4 ТК «Солнечный» 3 этаж</span>
+								<span class="contacts-item__icon">
+								  <svg class="icon">
+									<use xlink:href="/assets/img/sprite.svg#location"></use>
+								  </svg>
+								</span>
+                                <span class="contacts-item__text">Пр. Ветеранов, д. 169, к. 4<br/>ТК «Солнечный» 3 этаж</span>
                             </p>
                         </div>
                     </div>
@@ -53,9 +58,15 @@
                         <p class="group-contacts__title">график работы:</p>
                         <div class="group-contacts__inner">
                             <p class="contacts-item">
-                    <span class="contacts-item__text">ПН-ПТ с 7:00 до 23:00
-                      <br> СБ-ВС с 8:00 до 22.3
-                    </span>
+								<span class="contacts-item__icon">
+								  <!-- <svg class="icon"> -->
+									<!-- <use xlink:href="/assets/img/clock.svg"></use> -->
+								  <!-- </svg> -->
+								  <img src="/assets/img/clock.png" width="16px" height="16px" />
+								</span>
+								<span class="contacts-item__text">Пн-Пт: 7:00 - 23:00
+								  <br>Сб-Вс: 8:00 - 22.30
+								</span>
                             </p>
                         </div>
                     </div>

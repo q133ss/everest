@@ -12,7 +12,7 @@
                         <img src="/assets/img/about-02.png" alt="Зал">
                     </div>
                     <div class="about__text">
-                        <p>Спортивный клуб EVEREST — это клуб единоборств с современным тренажерным залом и зоной кроссфита. На площади около 1 000 м2 расположены зоны отдыха, просторные раздевалки с парными и оборудованные залы, которые станут отличной
+                        <p>Спортивный клуб EVEREST — это клуб единоборств с современным тренажерным залом и зоной кроссфита. На площади около 1 000 м<sup>2</sup> расположены зоны отдыха, просторные раздевалки с парными и оборудованные залы, которые станут отличной
                             тренировочной площадкой как для профессиональных спортсменов, так и для всех, кому близок спортивный образ жизни. </p>
                         <p>Одна их важных целей клуба — развитие детско-юношеского спорта. Под руководством профессиональных тренеров юные спортсмены растут, тренируются и идут к своим победам, а командный дух, поездки на сборы и соревнования помогают
                             им на этом пути.</p>
@@ -36,7 +36,7 @@
                     <div class="item-conditions__info">
                         <h3 class="item-conditions__title">Тренажерный зал</h3>
                         <div class="item-conditions__content">
-                            <p>В нашем клубе вас ожидает профессионально оборудованный тренажерный зал площадью более 300 м2. Широкая линейка тренажеров FOREMAN для силовых упражнений на все группы мышц, кардио-зона с панорамным видом и велотренажерами
+                            <p>В нашем клубе вас ожидает профессионально оборудованный тренажерный зал площадью более 300 м<sup>2</sup>. Широкая линейка тренажеров FOREMAN для силовых упражнений на все группы мышц, кардио-зона с панорамным видом и велотренажерами
                                 RealRyder, а также тренировочный блок для кроссфита, функциональных и круговых тренировок — все это вы найдете здесь.</p>
                             <p>В зале клуба EVEREST есть все необходимое для тренировок: резинки, гантели, мячи, гири, платформы. А самое главное — рядом всегда находятся профессиональные тренеры, готовые помочь советом и ответить на ваши вопросы.</p>
                         </div>
@@ -49,7 +49,7 @@
                     <div class="item-conditions__info">
                         <h3 class="item-conditions__title">Зал единоборств</h3>
                         <div class="item-conditions__content">
-                            <p>Просторный зал, специально спроектированный для занятий различными видами единоборств, расположился в нашем клубе на площадьи почти 350 м2. Для групповых и индивидуальных тренировок мы предусмотрели полноразмерный 6-метровый
+                            <p>Просторный зал, специально спроектированный для занятий различными видами единоборств, расположился в нашем клубе на площади почти 350 м<sup>2</sup>. Для групповых и индивидуальных тренировок мы предусмотрели полноразмерный 6-метровый
                                 ринг, зону с десятью боксерскими мешками разной массы и протяженным рукоходом, а также большое количество свободного пространства для выполнения упражнений или тренировок с собственным весом.</p>
                             <p>По периметру помещения расположены маты для обеспечения безопасности спортсменов, а зеркальная стена позволяет наглядно отрабатывать технику. Доступен полный набор необходимого инвентаря: перчатки, лапы, мячи, скакалки,
                                 резинки.
@@ -59,12 +59,12 @@
                 </li>
                 <li class="conditions__item item-conditions">
                     <div class="item-conditions__img">
-                        <img src="/assets/img/conditions-03.png" alt="Групповые программы">
+                        <img src="/assets/img/IMG_8669.jpg" alt="Групповые программы">
                     </div>
                     <div class="item-conditions__info">
                         <h3 class="item-conditions__title">Групповые программы</h3>
                         <div class="item-conditions__content">
-                            <p>Приобретая пакеты тренировок или абонемент на посещения клуба EVEREST, вы получаете доступ к групповым тренировкам по разным направлениям: кроссфит, йога, фитнес, функциональный тренинг, сайкл, программа для поддержания
+                            <p>Приобретая пакеты тренировок или абонемент на посещения клуба EVEREST, вы получаете доступ к групповым тренировкам по разным направлениям: кроссфит, фитнес, функциональный тренинг, сайкл, программа для поддержания
                                 здоровья спины. Испытайте все направления, а затем выберите то, что подходит вам больше всего, либо комбинируйте программы между собой для получения максимального результата.</p>
                             <p>Тренировки проходят в одном из оборудованных залов клуба в зависимости от выбранной программы. Мы предоставляем весь необходимый для тренировок инвентарь.
                             </p>
@@ -76,7 +76,7 @@
                         <img src="/assets/img/gallery-03.png" alt="Зона отдыха и удобства">
                     </div>
                     <div class="item-conditions__info">
-                        <h3 class="item-conditions__title">Зона отдыха и удобства</h3>
+                        <h3 class="item-conditions__title">Удобства и зона отдыха</h3>
                         <div class="item-conditions__content">
                             <p>В клубе EVEREST мы предусмотрели множество мелочей для вашего комфортного тренинга и времяпровождения. Мы стремимся к тому, чтобы дух клуба, а вместе с ним стремление к победам, преодоление ограничений и возможностей,
                                 вера в свои силы, поддерживали вас на каждом шагу вашего пути.</p>
@@ -135,7 +135,7 @@
             </div>
         </div>
     </section>
-    <section class="section vacancies pb-big">
+    <section class="section vacancies pb-big" style="display: none;">
         <div class="container">
             <h2 class="small-title vacancies__title">Вакансии</h2>
             <div class="vacancies-slider slider">
@@ -145,42 +145,48 @@
                             <div class="vacancies-item" data-open-modal="vacancies-01">
                                 <h3 class="vacancies-item__title">Тренер по боксу</h3>
                                 <p class="vacancies-item__descr">Следует отметить, что сложившаяся структура организации говорит о возможностях анализа существующих паттернов поведения. (Fish text)</p>
-                                <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request">Связаться</button>
+                                <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request"></button>
+                                <!-- <button class="button vacancies-item__btn" >Связаться</button> -->
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="vacancies-item" data-open-modal="vacancies-02">
                                 <h3 class="vacancies-item__title">Фитнес тренер</h3>
                                 <p class="vacancies-item__descr">Следует отметить, что сложившаяся структура организации говорит о возможностях анализа существующих паттернов поведения. (Fish text)</p>
-                                <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по фитносу')" data-open-modal="request">Связаться</button>
+                                <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: тренер по фитносу')" data-open-modal="request"></button>
+                                <!-- <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по фитносу')" data-open-modal="request">Связаться</button> -->
                             </div>
                         </div>
                         <div class="swiper-slide" data-open-modal="vacancies-03">
                             <div class="vacancies-item">
                                 <h3 class="vacancies-item__title">Администратор</h3>
                                 <p class="vacancies-item__descr">Следует отметить, что сложившаяся структура организации говорит о возможностях анализа существующих паттернов поведения. (Fish text)</p>
-                                <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: администратор')" data-open-modal="request">Связаться</button>
+                                <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: администратор')" data-open-modal="request"></button>
+                                <!-- <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: администратор')" data-open-modal="request">Связаться</button> -->
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="vacancies-item" data-open-modal="vacancies-04">
                                 <h3 class="vacancies-item__title">Тренер по каратэ</h3>
                                 <p class="vacancies-item__descr">Следует отметить, что сложившаяся структура организации говорит о возможностях анализа существующих паттернов поведения. (Fish text)</p>
-                                <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по каратэ')" data-open-modal="request">Связаться</button>
+                                    <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: тренер по каратэ')" data-open-modal="request"></button>
+                                <!-- <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по каратэ')" data-open-modal="request">Связаться</button> -->
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="vacancies-item" data-open-modal="vacancies-01">
                                 <h3 class="vacancies-item__title">Тренер по боксу</h3>
                                 <p class="vacancies-item__descr">Следует отметить, что сложившаяся структура организации говорит о возможностях анализа существующих паттернов поведения. (Fish text)</p>
-                                <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request">Связаться</button>
+                                <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request"></button>
+                                <!-- <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request">Связаться</button> -->
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="vacancies-item" data-open-modal="vacancies-01">
                                 <h3 class="vacancies-item__title">Тренер по боксу</h3>
                                 <p class="vacancies-item__descr">Следует отметить, что сложившаяся структура организации говорит о возможностях анализа существующих паттернов поведения. (Fish text)</p>
-                                <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request">Связаться</button>
+                                <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request"></button>
+                                <!-- <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request">Связаться</button> -->
                             </div>
                         </div>
                     </div>
@@ -326,6 +332,22 @@
     </div>
 @endsection
 @section('js')
+    <style>
+        #overlay-gallery .nav__close{
+            left: unset!important;
+            right: 175px!important;
+        }
+        
+        .item-articles__btn{
+            right: 30px;
+        }
+        
+        .item-articles__btn::after{
+            background-color: #00000000;
+            background-image: url(/assets/img/icons/arrow.svg);
+            box-shadow: none;
+        }
+    </style>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         var zoom = function(index) {

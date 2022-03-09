@@ -2889,7 +2889,7 @@
                     balloonContent: ['<div class="map__title">Спортивный клуб EVEREST:</div>', '<div class="map__subtitle">Пр. Ветеранов, д. 169, к. 4 ТК «Солнечный» 3 этаж"</div>', "</div>"].join("")
                 }, {
                     iconLayout: "default#image",
-                    iconImageHref: "./img/icons/location.svg",
+                    iconImageHref: "/assets/img/icons/location.svg",
                     iconImageSize: [40, 40],
                     iconImageOffset: [-20, -40]
                 });
