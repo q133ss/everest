@@ -15,10 +15,7 @@ return new class extends Migration
     {
         Schema::create('weeks', function (Blueprint $table) {
             $table->id();
-            $table->string('start_day');
-            $table->string('start_month');
-            $table->string('end_day');
-            $table->string('end_month');
+            $table->string('date');
             $table->timestamps();
         });
     }

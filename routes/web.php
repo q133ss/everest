@@ -37,6 +37,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.' , 'middleware' => 'role:admi
     Route::get('/order/{id}', [App\Http\Controllers\Admin\OrderController::class, 'show'])->name('orders.show');
     //Тренеры
     Route::resource('trainer', App\Http\Controllers\Admin\TrainerController::class);
+    //Недели
+    Route::resource('week', App\Http\Controllers\Admin\WeekController::class);
 });
 
 Auth::routes();

@@ -100,7 +100,7 @@
                     <li class="menu-title">Расписание</li>
 
                     <li>
-                        <a href="#">
+                        <a href="{{route('admin.week.index')}}">
                             <i class="mdi mdi-calendar-blank"></i><span> Недели </span>
                         </a>
                     </li>
