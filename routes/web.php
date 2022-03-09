@@ -44,6 +44,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.' , 'middleware' => 'role:admi
     //Настройки
     Route::get('/settings', [App\Http\Controllers\Admin\SettingsController::class, 'index'])->name('settings.index');
     Route::post('/settings', [App\Http\Controllers\Admin\SettingsController::class, 'save'])->name('settings.save');
+    //Абонименты
+    Route::resource('subscribe', App\Http\Controllers\Admin\SubscribeController::class);
 });
 
 Auth::routes();

@@ -80,7 +80,7 @@
 
 
                     <li>
-                        <a href="#">
+                        <a href="{{route('admin.subscribe.index')}}">
                             <i class="mdi mdi-book-open-variant"></i><span> Абонементы </span>
                         </a>
                     </li>
@@ -252,6 +252,8 @@
 <script src="/admin_assets/assets/js/jquery.core.js"></script>
 <script src="/admin_assets/assets/js/jquery.app.js"></script>
 <script src="/admin_assets/custom.js"></script>
+
+@yield('js')
 
 </body>
 </html>
