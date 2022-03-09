@@ -39,6 +39,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.' , 'middleware' => 'role:admi
     Route::resource('trainer', App\Http\Controllers\Admin\TrainerController::class);
     //Недели
     Route::resource('week', App\Http\Controllers\Admin\WeekController::class);
+    //Занятия
+    Route::resource('occup', App\Http\Controllers\Admin\OccupController::class);
 });
 
 Auth::routes();

@@ -106,8 +106,8 @@
                     </li>
 
                     <li>
-                        <a href="#">
-                            <i class="mdi mdi-calendar-text"></i><span> Расписание </span>
+                        <a href="{{route('admin.occup.index')}}">
+                            <i class="mdi mdi-calendar-text"></i><span> Занятия </span>
                         </a>
                     </li>
 

@@ -20,4 +20,12 @@ class Occupation extends Model
     public function time(){
         return $this->hasOne(Time::class);
     }
+
+    public function section(){
+        return $this->hasOne(Section::class, 'id', 'section_id');
+    }
+
+    public function trainer(){
+        return $this->hasOne(Trainer::class, 'id', 'trainer_id');
+    }
 }
