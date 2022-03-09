@@ -5,8 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Order;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\FeedbackMailer;
+use App\Models\Setting;
 
 class OrderController extends Controller
 {
@@ -23,7 +22,13 @@ class OrderController extends Controller
         $order->type = $request->type;
         $order->save();
 
-        $to  = "blockstar2k@gmail.com" ;
+        $email = Setting::where('key', 'email')->first()['value'];
+
+        if($email != NULL) {
+            $to = $email;
+        }else{
+            $to = 'test@gmail.com';
+        }
 
         $subject = "Everest заявка!";
         $message = ' <p>Имя: '.$order->name.'</p>  </br> <p>Телефон: '.$order->phone.'</p> <br> <p>Комментарий: '.$order->comment.'</p><br><p>Тип: '.$order->type.'</p>';

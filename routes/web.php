@@ -41,6 +41,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.' , 'middleware' => 'role:admi
     Route::resource('week', App\Http\Controllers\Admin\WeekController::class);
     //Занятия
     Route::resource('occup', App\Http\Controllers\Admin\OccupController::class);
+    //Настройки
+    Route::get('/settings', [App\Http\Controllers\Admin\SettingsController::class, 'index'])->name('settings.index');
+    Route::post('/settings', [App\Http\Controllers\Admin\SettingsController::class, 'save'])->name('settings.save');
 });
 
 Auth::routes();

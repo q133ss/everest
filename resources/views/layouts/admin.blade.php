@@ -114,7 +114,7 @@
                     <li class="menu-title">Настройки</li>
 
                     <li>
-                        <a href="#">
+                        <a href="{{route('admin.settings.index')}}">
                             <i class="mdi mdi-settings"></i><span> Настройки </span>
                         </a>
                     </li>
