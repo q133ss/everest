@@ -139,6 +139,12 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="{{route('admin.settings.account.index')}}">
+                            <i class="mdi mdi-settings"></i><span> Аккаунт </span>
+                        </a>
+                    </li>
+
 {{--                    <li>--}}
 {{--                        <a href="javascript: void(0);" class=""><i class="mdi mdi-account-multiple"></i> <span> Тренеры </span> <span class="menu-arrow"></span></a>--}}
 {{--                        <ul class="nav-second-level" aria-expanded="false">--}}

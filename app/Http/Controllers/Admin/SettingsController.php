@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Setting;
 
@@ -222,5 +223,24 @@ class SettingsController extends Controller
 
 
         return to_route('admin.settings.index')->withSuccess('Настройки сохранены');
+    }
+
+    public function account(){
+        $email = \Auth::user()->email;
+        return view('admin.account', compact('email'));
+    }
+
+    public function account_save(Request $request){
+        $user = User::find(\Auth::user()->id);
+        $user->email = $request->email;
+        if($request->password != NULL){
+            if($request->password == $request->password2){
+                $user->password = bcrypt($request->password);
+            }else{
+                return redirect()->back()->withError('Пароли не совпадают');
+            }
+        }
+        $user->save();
+        return to_route('admin.settings.account.index')->withSuccess('Данные успешно сохранены');
     }
 }
