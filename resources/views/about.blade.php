@@ -141,54 +141,16 @@
             <div class="vacancies-slider slider">
                 <div class="swiper">
                     <div class="swiper-wrapper">
+                        @foreach($vacancies as $key => $vacancy)
                         <div class="swiper-slide">
-                            <div class="vacancies-item" data-open-modal="vacancies-01">
-                                <h3 class="vacancies-item__title">Тренер по боксу</h3>
-                                <p class="vacancies-item__descr">Следует отметить, что сложившаяся структура организации говорит о возможностях анализа существующих паттернов поведения. (Fish text)</p>
-                                <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request"></button>
+                            <div class="vacancies-item" data-open-modal="vacancies-{{$key}}">
+                                <h3 class="vacancies-item__title">{{$vacancy->title}}</h3>
+                                <p class="vacancies-item__descr">{{$vacancy->excerpt}}</p>
+                                <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: {{$vacancy->title}}')" data-open-modal="request"></button>
                                 <!-- <button class="button vacancies-item__btn" >Связаться</button> -->
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="vacancies-item" data-open-modal="vacancies-02">
-                                <h3 class="vacancies-item__title">Фитнес тренер</h3>
-                                <p class="vacancies-item__descr">Следует отметить, что сложившаяся структура организации говорит о возможностях анализа существующих паттернов поведения. (Fish text)</p>
-                                <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: тренер по фитносу')" data-open-modal="request"></button>
-                                <!-- <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по фитносу')" data-open-modal="request">Связаться</button> -->
-                            </div>
-                        </div>
-                        <div class="swiper-slide" data-open-modal="vacancies-03">
-                            <div class="vacancies-item">
-                                <h3 class="vacancies-item__title">Администратор</h3>
-                                <p class="vacancies-item__descr">Следует отметить, что сложившаяся структура организации говорит о возможностях анализа существующих паттернов поведения. (Fish text)</p>
-                                <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: администратор')" data-open-modal="request"></button>
-                                <!-- <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: администратор')" data-open-modal="request">Связаться</button> -->
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="vacancies-item" data-open-modal="vacancies-04">
-                                <h3 class="vacancies-item__title">Тренер по каратэ</h3>
-                                <p class="vacancies-item__descr">Следует отметить, что сложившаяся структура организации говорит о возможностях анализа существующих паттернов поведения. (Fish text)</p>
-                                    <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: тренер по каратэ')" data-open-modal="request"></button>
-                                <!-- <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по каратэ')" data-open-modal="request">Связаться</button> -->
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="vacancies-item" data-open-modal="vacancies-01">
-                                <h3 class="vacancies-item__title">Тренер по боксу</h3>
-                                <p class="vacancies-item__descr">Следует отметить, что сложившаяся структура организации говорит о возможностях анализа существующих паттернов поведения. (Fish text)</p>
-                                <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request"></button>
-                                <!-- <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request">Связаться</button> -->
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="vacancies-item" data-open-modal="vacancies-01">
-                                <h3 class="vacancies-item__title">Тренер по боксу</h3>
-                                <p class="vacancies-item__descr">Следует отметить, что сложившаяся структура организации говорит о возможностях анализа существующих паттернов поведения. (Fish text)</p>
-                                <button class="button item-articles__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request"></button>
-                                <!-- <button class="button vacancies-item__btn" onclick="$('#order_type').val('Вакансии: тренер по боксу')" data-open-modal="request">Связаться</button> -->
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="swiper-navigation vacancies-slider__navigation">
@@ -207,7 +169,9 @@
             </div>
         </div>
     </section>
-    <div class="popup-vacancies" data-modal="vacancies-01">
+
+    @foreach($vacancies as $key => $vacancy)
+    <div class="popup-vacancies" data-modal="vacancies-{{$key}}">
         <div class="popup-vacancies__wrapper" data-modal-wrapper>
             <div class="popup-vacancies__content" data-modal-content>
                 <button class="popup-vacancies__close" data-modal-close aria-label="Закрыть модальное окно">
@@ -216,73 +180,15 @@
                     </svg>
                 </button>
                 <div class="popup-vacancies__info">
-                    <p class="popup-vacancies__title">Тренер по боксу</p>
+                    <p class="popup-vacancies__title">{{$vacancy->title}}</p>
                     <div class="popup-vacancies__text">
-                        <p>Интервальная тренировка высокой интенсивности на силу и выносливость, состоящие из разнообразных анаэробных упражнений, элементов гиревого спорта, пауэрлифтинга, гимнастики, тяжелой атлетики и упражнений с собственным весом.
-                            Интервальная тренировка высокой интенсивности на силу и выносливость, состоящие из разнообразных анаэробных упражнений, элементов гиревого спорта, пауэрлифтинга, гимнастики, тяжелой атлетики и упражнений с собственным
-                            весом </p>
+                        <p>{{$vacancy->text}}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="popup-vacancies" data-modal="vacancies-02">
-        <div class="popup-vacancies__wrapper" data-modal-wrapper>
-            <div class="popup-vacancies__content" data-modal-content>
-                <button class="popup-vacancies__close" data-modal-close aria-label="Закрыть модальное окно">
-                    <svg class="icon">
-                        <use xlink:href="/assets/img/sprite.svg#close"></use>
-                    </svg>
-                </button>
-                <div class="popup-vacancies__info">
-                    <p class="popup-vacancies__title">Фитнес тренер</p>
-                    <div class="popup-vacancies__text">
-                        <p>Интервальная тренировка высокой интенсивности на силу и выносливость, состоящие из разнообразных анаэробных упражнений, элементов гиревого спорта, пауэрлифтинга, гимнастики, тяжелой атлетики и упражнений с собственным весом.
-                            Интервальная тренировка высокой интенсивности на силу и выносливость, состоящие из разнообразных анаэробных упражнений, элементов гиревого спорта, пауэрлифтинга, гимнастики, тяжелой атлетики и упражнений с собственным
-                            весом </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="popup-vacancies" data-modal="vacancies-03">
-        <div class="popup-vacancies__wrapper" data-modal-wrapper>
-            <div class="popup-vacancies__content" data-modal-content>
-                <button class="popup-vacancies__close" data-modal-close aria-label="Закрыть модальное окно">
-                    <svg class="icon">
-                        <use xlink:href="/assets/img/sprite.svg#close"></use>
-                    </svg>
-                </button>
-                <div class="popup-vacancies__info">
-                    <p class="popup-vacancies__title">Администратор</p>
-                    <div class="popup-vacancies__text">
-                        <p>Интервальная тренировка высокой интенсивности на силу и выносливость, состоящие из разнообразных анаэробных упражнений, элементов гиревого спорта, пауэрлифтинга, гимнастики, тяжелой атлетики и упражнений с собственным весом.
-                            Интервальная тренировка высокой интенсивности на силу и выносливость, состоящие из разнообразных анаэробных упражнений, элементов гиревого спорта, пауэрлифтинга, гимнастики, тяжелой атлетики и упражнений с собственным
-                            весом </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="popup-vacancies" data-modal="vacancies-04">
-        <div class="popup-vacancies__wrapper" data-modal-wrapper>
-            <div class="popup-vacancies__content" data-modal-content>
-                <button class="popup-vacancies__close" data-modal-close aria-label="Закрыть модальное окно">
-                    <svg class="icon">
-                        <use xlink:href="/assets/img/sprite.svg#close"></use>
-                    </svg>
-                </button>
-                <div class="popup-vacancies__info">
-                    <p class="popup-vacancies__title">Тренер по каратэ</p>
-                    <div class="popup-vacancies__text">
-                        <p>Интервальная тренировка высокой интенсивности на силу и выносливость, состоящие из разнообразных анаэробных упражнений, элементов гиревого спорта, пауэрлифтинга, гимнастики, тяжелой атлетики и упражнений с собственным весом.
-                            Интервальная тренировка высокой интенсивности на силу и выносливость, состоящие из разнообразных анаэробных упражнений, элементов гиревого спорта, пауэрлифтинга, гимнастики, тяжелой атлетики и упражнений с собственным
-                            весом </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @endforeach
 
 
     <div id="overlay-gallery">
@@ -337,11 +243,11 @@
             left: unset!important;
             right: 175px!important;
         }
-        
+
         .item-articles__btn{
             right: 30px;
         }
-        
+
         .item-articles__btn::after{
             background-color: #00000000;
             background-image: url(/assets/img/icons/arrow.svg);

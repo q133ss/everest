@@ -85,10 +85,16 @@
                         </a>
                     </li>
 
+                    <li class="menu-title">О клубе</li>
+                    <li>
+                        <a href="{{route('admin.vacancy.index')}}">
+                            <i class="mdi mdi-account-edit"></i><span> Вакансии </span>
+                        </a>
+                    </li>
 
                     <li>
                         <a href="#">
-                            <i class="mdi mdi-account-edit"></i><span> Вакансии </span>
+                            <i class="mdi mdi-image-multiple"></i><span> Галлерея </span>
                         </a>
                     </li>
 
