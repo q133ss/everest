@@ -41,6 +41,11 @@
                 </div>
 
                 <div class="form-group col-md-6">
+                    <label for="inputEmail6" class="col-form-label">Цвет для календаря <small><a href="https://g.co/kgs/ebi2SP" target="_blank">Цвета</a></small> </label>
+                    <input name="color" class="form-control" placeholder="#f02e46" type="text">
+                </div>
+
+                <div class="form-group col-md-6">
                 <button type="submit" class="btn btn-success">Создать</button>
                 </div>
             </form>

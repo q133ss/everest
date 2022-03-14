@@ -10,21 +10,21 @@
                     <div class="group-contacts contacts__group">
                         <p class="group-contacts__title">телефон:</p>
                         <div class="group-contacts__inner">
-                            <a class="contacts-item" href="tel:79213333840">
+                            <a class="contacts-item" href="tel:{{str_replace(" ",'',str_replace('+','',$header_phone))}}">
                     <span class="contacts-item__icon">
                       <svg class="icon">
                         <use xlink:href="/assets/img/sprite.svg#phone"></use>
                       </svg>
                     </span>
-                                <span class="contacts-item__text">+7 921 33 33 840</span>
+                                <span class="contacts-item__text">{{$header_phone}}</span>
                             </a>
-                            <a class="contacts-item" href="tel:79313333890">
+                            <a class="contacts-item" href="tel:{{str_replace(" ",'',str_replace('+','',$phone2))}}">
                     <span class="contacts-item__icon">
                       <svg class="icon">
                         <use xlink:href="/assets/img/sprite.svg#phone"></use>
                       </svg>
                     </span>
-                                <span class="contacts-item__text">+7 931 33 33 890</span>
+                                <span class="contacts-item__text">{{$phone2}}</span>
                             </a>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
 									<use xlink:href="/assets/img/sprite.svg#mail"></use>
 								  </svg>
 								</span>
-                                <span class="contacts-item__text">everest-sg@yandex.ru</span>
+                                <span class="contacts-item__text">{{$cont_email}}</span>
                             </a>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
 									<use xlink:href="/assets/img/sprite.svg#location"></use>
 								  </svg>
 								</span>
-                                <span class="contacts-item__text">Пр. Ветеранов, д. 169, к. 4<br/>ТК «Солнечный» 3 этаж</span>
+                                <span class="contacts-item__text">{!! $cont_adr !!}</span>
                             </p>
                         </div>
                     </div>
@@ -64,8 +64,8 @@
 								  <!-- </svg> -->
 								  <img src="/assets/img/clock.png" width="16px" height="16px" />
 								</span>
-								<span class="contacts-item__text">Пн-Пт: 7:00 - 23:00
-								  <br>Сб-Вс: 8:00 - 22.30
+								<span class="contacts-item__text">
+                                    {!! $cont_gr !!}
 								</span>
                             </p>
                         </div>

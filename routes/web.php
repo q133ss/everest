@@ -57,13 +57,13 @@ Route::get('/about', [App\Http\Controllers\Front\AboutController::class, 'index'
 Route::get('/trainers', [App\Http\Controllers\Front\TrainerController::class, 'index'])->name('trainer.index');
 Route::get('/price', [App\Http\Controllers\Front\PriceController::class, 'index'])->name('price.index');
 Route::get('/shop', [App\Http\Controllers\Front\ShopController::class, 'index'])->name('shop.index');
-Route::view('/contact', 'contact')->name('contact.index');
+Route::get('/contact', [App\Http\Controllers\Front\ContactController::class, 'index'])->name('contact.index');
 Route::post('/order/new/', [App\Http\Controllers\Admin\OrderController::class, 'new'])->name('orders.new');
 Route::view('/single','solo')->name('solo');
 Route::get('/sections/{id}', [App\Http\Controllers\Front\SectionController::class, 'index'])->name('section.index');
 Route::view('/group','group')->name('group');
-Route::view('/schedule','schedule')->name('schedule');
-Route::view('/schedule/{trainer_id}','schedule')->name('schedule');
+Route::get('/schedule', [App\Http\Controllers\Front\ScheduleController::class, 'index'])->name('schedule');
+Route::get('/schedule/{trainer_id}', [App\Http\Controllers\Front\ScheduleController::class, 'trainer'])->name('schedule.trainer');
 Route::view('/policy', 'policy')->name('policy');
 Route::get('logout', function (){
         Auth::logout();

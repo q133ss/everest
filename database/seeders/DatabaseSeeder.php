@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
             'Вторник',
             'Среда',
             'Четверг',
-            'Суббота'
+            'Суббота',
+            'Воскресенье'
         ];
         foreach($days as $day){
             DB::table('days')->insert([
@@ -31,13 +32,17 @@ class DatabaseSeeder extends Seeder
         }
 
         $times = [
-            '9:00',
+            '9:30',
+            '10:00',
+            '11:00',
             '12:00',
+            '15:00',
             '16:00',
             '17:00',
             '18:00',
             '19:00',
             '20:00',
+            '20:30',
         ];
 
         foreach($times as $time){

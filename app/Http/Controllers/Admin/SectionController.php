@@ -69,6 +69,8 @@ class SectionController extends Controller
         }else{
             return redirect()->back()->withError('Выберите баннер');
         }
+        $section->color = $request->color;
+
         $section->category_id = $request->category;
         $section->save();
         return to_route('admin.section.index')->withSuccess('Секция успешно создана!');
@@ -135,6 +137,7 @@ class SectionController extends Controller
             $section->banner = '/storage/'.$image_path;
         }
         $section->category_id = $request->category;
+        $section->color = $request->color;
         $section->save();
 
         return to_route('admin.section.index')->withSuccess('Секция успешно обновлена!');

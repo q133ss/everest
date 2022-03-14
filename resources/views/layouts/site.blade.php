@@ -25,8 +25,8 @@
             <a class="header__logo logo" href="/">
                 <img src="/assets/img/logo.svg" alt="Everest">
             </a>
-            <a class="contacts-item header__phone" href="tel:79213333840">
-                <span class="contacts-item__text">+7 921 33 33 840</span>
+            <a class="contacts-item header__phone" href="tel:{{str_replace(" ",'',str_replace('+','',$header_phone))}}">
+                <span class="contacts-item__text">{{$header_phone}}</span>
                 <span class="contacts-item__icon">
             <svg class="icon">
               <use xlink:href="/assets/img/sprite.svg#phone"></use>
@@ -81,21 +81,21 @@
                             </li>
                         </ul>
                         <div class="nav__contacts">
-                            <a class="contacts-item" href="tel:79213333840">
+                            <a class="contacts-item" href="tel:{{str_replace(" ",'',str_replace('+','',$header_phone))}}">
                                     <span class="contacts-item__icon">
                     <svg class="icon">
                       <use xlink:href="/assets/img/sprite.svg#phone"></use>
                     </svg>
                   </span>
-                                <span class="contacts-item__text">+7 921 33 33 840</span>
+                                <span class="contacts-item__text">{{$header_phone}}</span>
                             </a>
-                            <a class="contacts-item" href="tel:79313333890">
+                            <a class="contacts-item" href="tel:{{str_replace(" ",'',str_replace('+','',$phone2))}}">
                                     <span class="contacts-item__icon">
                     <svg class="icon">
                       <use xlink:href="/assets/img/sprite.svg#phone"></use>
                     </svg>
                   </span>
-                                <span class="contacts-item__text">+7 931 33 33 890</span>
+                                <span class="contacts-item__text">{{$phone2}}</span>
                             </a>
                         </div>
                         <div class="nav__socials">
@@ -125,7 +125,7 @@
     <footer class="footer">
         <div class="container footer__container">
             <div class="footer__info">
-                <address class="footer__address">Пр. Ветеранов, д. 169, к. 4 ТК «Солнечный» 3 этаж</address>
+                <address class="footer__address">{!! $footer_adr !!}</address>
                 <a class="footer__policy" href="/assets/policy.html">Политика конфедициальности</a>
             </div>
             <a class="logo footer__logo" href="/assets/">
@@ -133,32 +133,32 @@
             </a>
             <div class="footer__inner">
                 <div class="footer-contacts footer__contacts">
-                    <a class="contacts-item footer-contacts__item" href="tel:79213333840">
+                    <a class="contacts-item footer-contacts__item" href="tel:{{str_replace(" ",'',str_replace('+','',$header_phone))}}">
                             <span class="contacts-item__icon">
                 <svg class="icon">
                   <use xlink:href="/assets/img/sprite.svg#phone"></use>
                 </svg>
               </span>
-                        <span clas="contacts-item__text">+7 921 33 33 840</span>
+                        <span clas="contacts-item__text">{{$header_phone}}</span>
                     </a>
-                    <a class="contacts-item footer-contacts__item" href="tel:79313333890">
+                    <a class="contacts-item footer-contacts__item" href="tel:{{str_replace(" ",'',str_replace('+','',$phone2))}}">
                             <span class="contacts-item__icon">
                 <svg class="icon">
                   <use xlink:href="/assets/img/sprite.svg#phone"></use>
                 </svg>
               </span>
-                        <span clas="contacts-item__text">+7 931 33 33 890</span>
+                        <span clas="contacts-item__text">{{$phone2}}</span>
                     </a>
                 </div>
                 <div class="footer-socials">
-                    <a class="contacts-item footer-socials__item" href="#" aria-label="Перейти в Instagram">
+                    <a class="contacts-item footer-socials__item" href="{{$inst}}" aria-label="Перейти в Instagram">
                             <span class="contacts-item__icon">
                 <svg class="icon">
                   <use xlink:href="/assets/img/sprite.svg#instagram"></use>
                 </svg>
               </span>
                     </a>
-                    <a class="contacts-item footer-socials__item" href="#" aria-label="Перейти в Вконтакте">
+                    <a class="contacts-item footer-socials__item" href="{{$vk}}" aria-label="Перейти в Вконтакте">
                             <span class="contacts-item__icon">
                 <svg class="icon">
                   <use xlink:href="/assets/img/sprite.svg#vk"></use>
