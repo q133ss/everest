@@ -93,7 +93,7 @@
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="{{route('admin.gallery.index')}}">
                             <i class="mdi mdi-image-multiple"></i><span> Галлерея </span>
                         </a>
                     </li>

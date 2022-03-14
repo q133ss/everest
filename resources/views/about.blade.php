@@ -97,26 +97,13 @@
             <div class="container">
                 <div class="swiper ">
                     <div class="swiper-wrapper">
+                        @foreach($gallery as $key => $photo)
                         <div class="swiper-slide">
-                            <a class="gallery-slider__item" data-fslightbox="gallery" onclick="zoom(0)">
-                                <img src="/assets/img/gallery-01.jpg" alt="">
+                            <a class="gallery-slider__item" data-fslightbox="gallery" onclick="zoom({{$key}})">
+                                <img src="{{$photo->src}}" alt="">
                             </a>
                         </div>
-                        <div class="swiper-slide">
-                            <a class="gallery-slider__item" data-fslightbox="gallery" onclick="zoom(1)">
-                                <img src="/assets/img/gallery-02.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="gallery-slider__item" data-fslightbox="gallery" onclick="zoom(2)">
-                                <img src="/assets/img/gallery-03.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="gallery-slider__item" data-fslightbox="gallery" onclick="zoom(3)">
-                                <img src="/assets/img/gallery-01.jpg" alt="">
-                            </a>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="swiper-navigation slider__navigation">
@@ -200,26 +187,13 @@
         <div class="container">
             <div class="swiper ">
                 <div class="swiper-wrapper">
+                    @foreach($gallery as $photo)
                     <div class="swiper-slide">
                         <a class="gallery-slider__item" data-fslightbox="gallery">
-                            <img src="/assets/img/gallery-01.png" alt="">
+                            <img src="{{$photo->src}}" alt="">
                         </a>
                     </div>
-                    <div class="swiper-slide">
-                        <a class="gallery-slider__item" data-fslightbox="gallery">
-                            <img src="/assets/img/gallery-02.png" alt="">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="gallery-slider__item" data-fslightbox="gallery">
-                            <img src="/assets/img/gallery-03.png" alt="">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="gallery-slider__item" data-fslightbox="gallery">
-                            <img src="/assets/img/gallery-01.png" alt="">
-                        </a>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="swiper-navigation">
                     <button id="overlay-button-prev" class="slider__prev slider__btn">
