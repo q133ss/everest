@@ -1,5 +1,8 @@
 @extends('layouts.admin')
 @section('title', 'Изменить новость')
+@section('meta')
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+@endsection
 @section('content')
     <div class="card">
         <div class="card-body">
@@ -28,7 +31,7 @@
 
                 <div class="form-group col-md-6">
                     <label for="inputEmail6" class="col-form-label">Текст</label>
-                    <textarea name="text" class="form-control" cols="30" rows="10">{{$post->text}}</textarea>
+                    <textarea name="text" id="editor" class="form-control" cols="30" rows="10">{{$post->text}}</textarea>
                 </div>
 
                 <div class="form-group col-md-6">
@@ -47,4 +50,15 @@
             </form>
         </div>
     </div>
+@endsection
+@section('js')
+    <script>
+        tinymce.init({
+            selector: '#editor'
+        });
+
+        tinymce.init({
+            selector: '#editor1'
+        });
+    </script>
 @endsection

@@ -149,22 +149,24 @@
         <div class="container">
             <h2 class="section-title sport-clubs__title">Секции</h2>
             <ul class="sport-clubs__list">
+                @foreach($section_cats as $cat)
                 <li class="sport-clubs__item">
-                    <a class="sport-clubs-card" href="{{route('group')}}">
+                    <a class="sport-clubs-card" href="{{route('section.index', $cat->id)}}">
                         <div class="sport-clubs-card__img">
-                            <img src="/assets/img/sport-clubs-01.jpg" alt="" aria-hidden="true">
+                            <img src="{{$cat->img}}" alt="" aria-hidden="true">
                         </div>
-                        <p class="sport-clubs-card__title">Групповые программы</p>
+                        <p class="sport-clubs-card__title">{{$cat->name}}</p>
                     </a>
                 </li>
-                <li class="sport-clubs__item">
-                    <a class="sport-clubs-card" href="{{route('solo')}}">
-                        <div class="sport-clubs-card__img">
-                            <img src="/assets/img/sport-clubs-02.jpg" alt="" aria-hidden="true">
-                        </div>
-                        <p class="sport-clubs-card__title">Единоборства</p>
-                    </a>
-                </li>
+                @endforeach
+{{--                <li class="sport-clubs__item">--}}
+{{--                    <a class="sport-clubs-card" href="{{route('solo')}}">--}}
+{{--                        <div class="sport-clubs-card__img">--}}
+{{--                            <img src="/assets/img/sport-clubs-02.jpg" alt="" aria-hidden="true">--}}
+{{--                        </div>--}}
+{{--                        <p class="sport-clubs-card__title">Единоборства</p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
             </ul>
         </div>
     </section>

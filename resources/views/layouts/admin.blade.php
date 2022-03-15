@@ -19,6 +19,8 @@
 
     <script src="/admin_assets/assets/js/modernizr.min.js"></script>
 
+    @yield('meta')
+
 </head>
 
 

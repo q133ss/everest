@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [App\Http\Controllers\Front\IndexController::class, 'index']);
 
 Route::get('/test', function (){
     $days = App\Models\Day::get();

@@ -52,11 +52,14 @@ class TrainerController extends Controller
         }else{
             return redirect()->back()->withError('Выберите фото');
         }
-        if($request->description != NULL) {
-            $trainer->description = $request->description;
-        }else{
-            return redirect()->back()->withError('Введите описание');
-        }
+        $trainer->education = $request->education;
+        $trainer->qua = $request->qua;
+//        if($request->description != NULL) {
+//            $trainer->description = $request->description;
+//        }else{
+//            return redirect()->back()->withError('Введите описание');
+//        }
+        $trainer->description = 'NULL';
         if($request->stage != NULL) {
             $trainer->stage = $request->stage;
         }else{
@@ -130,12 +133,15 @@ class TrainerController extends Controller
             $image_path = $image->store('uploads', 'public');
             $trainer->photo = '/storage/'.$image_path;
         }
+        $trainer->education = $request->education;
+        $trainer->qua = $request->qua;
+//        if($request->description != NULL) {
+//            $trainer->description = $request->description;
+//        }else{
+//            return redirect()->back()->withError('Введите описание');
+//        }
+        $trainer->description = 'NULL';
 
-        if($request->description != NULL) {
-            $trainer->description = $request->description;
-        }else{
-            return redirect()->back()->withError('Введите описание');
-        }
         if($request->stage != NULL) {
             $trainer->stage = $request->stage;
         }else{

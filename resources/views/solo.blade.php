@@ -4,7 +4,7 @@
     <section class="page-section directions">
         <div class="container">
             <div class="directions__top">
-                <h1 class="title directions__title">Единоборства</h1>
+                <h1 class="title directions__title">{{$category_name}}</h1>
                 <!-- <p class="subtitle directions__subtitle">спортивное направление - единоборства</p> -->
                 <a class="directions__link" href="{{route('schedule')}}">
                     <span>Смотреть расписание</span>

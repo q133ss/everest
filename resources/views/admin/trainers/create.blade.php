@@ -1,5 +1,8 @@
 @extends('layouts.admin')
 @section('title', 'Добавить тренера')
+@section('meta')
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+@endsection
 @section('content')
     <div class="card">
         <div class="card-body">
@@ -16,8 +19,13 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label for="inputEmail5" class="col-form-label">Описание</label>
-                    <textarea name="description" class="form-control" id="" cols="30" rows="10"></textarea>
+                    <label for="inputEmail6" class="col-form-label">Образование</label>
+                    <input type="text" name="education" class="form-control">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputEmail6" class="col-form-label">Квалификация</label>
+                    <input type="text" name="qua" class="form-control">
                 </div>
 
                 <div class="form-group col-md-6">
@@ -25,19 +33,25 @@
                     <input type="text" name="stage" class="form-control" id="inputEmail6">
                 </div>
 
-                <div class="form-group col-md-6">
-                    <label for="inputEmail6" class="col-form-label">Направления</label>
-                    <input type="text" name="directions" class="form-control">
-                </div>
-
-                <div class="form-group col-md-6">
-                    <label for="inputEmail4" class="col-form-label">Достижения</label>
-                    <textarea class="form-control" name="achievements" id="" cols="30" rows="10"></textarea>
-                </div>
 
                 <div class="form-group col-md-6">
                     <label for="inputEmail6" class="col-form-label">Возрастная категория</label>
                     <input type="text" name="age_category" class="form-control">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputEmail6" class="col-form-label">Основые направления</label>
+                    <input type="text" name="directions" class="form-control">
+                </div>
+
+{{--                <div class="form-group col-md-6">--}}
+{{--                    <label for="inputEmail5" class="col-form-label">Описание</label>--}}
+{{--                    <textarea name="description" class="form-control" id="editor" cols="30" rows="20"></textarea>--}}
+{{--                </div>--}}
+
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4" class="col-form-label">Достижения</label>
+                    <textarea class="form-control" name="achievements" id="editor1" cols="30" rows="20"></textarea>
                 </div>
 
                 <div class="form-group col-md-6">
@@ -55,4 +69,15 @@
             </form>
         </div>
     </div>
+@endsection
+@section('js')
+    <script>
+        tinymce.init({
+            selector: '#editor'
+        });
+
+        tinymce.init({
+            selector: '#editor1'
+        });
+    </script>
 @endsection

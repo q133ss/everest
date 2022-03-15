@@ -18,7 +18,7 @@
                                 <div class="coaches-item__info">
                                     <p class="coaches-item__name">{{$trainer->name}}</p>
                                     <div class="coaches-item__inner">
-                                        <p class="coaches-item__point">{{$trainer->description}}</p>
+                                        <p class="coaches-item__point">Квалификация — {!! $trainer->qua !!}</p>
                                         <p class="coaches-item__point">Стаж — {{$trainer->stage}}</p>
                                         <p class="coaches-item__point">Возрастная категория: {{$trainer->age_category}}</p>
                                         <p class="coaches-item__point">Основные направления: {{$trainer->directions}}</p>
@@ -34,7 +34,7 @@
                                             <div class="coaches-accordion__body" data-accordion-body>
                                                 <div class="coaches-accordion__body-content">
                                                     <p>Профессиональные достижения:
-                                                        {{$trainer->achievements}}
+                                                        {!! $trainer->achievements !!}
                                                     </p>
                                                 </div>
                                             </div>
