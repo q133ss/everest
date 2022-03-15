@@ -23,7 +23,13 @@
                             <th scope="row">{{$occup->id}}</th>
                             <td>{{$occup->time_spending}}</td>
                             <td>{{$occup->section->title}}</td>
-                            <td>{{$occup->trainer->name}}</td>
+                            <td>
+                                @if($occup->trainer != NULL)
+                                {{$occup->trainer->name}}
+                                @else
+                                    Отсутствует
+                                @endif
+                            </td>
                             <td>
                                 <a href="{{route('admin.occup.edit', $occup->id)}}" class="btn btn-info">Изменить</a>
                             </td>

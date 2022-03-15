@@ -30,12 +30,16 @@ class OccupController extends Controller
      */
     public function create()
     {
-        $sections = Section::get();
         $trainers = Trainer::get();
         $weeks = Week::get();
         $days = Day::get();
         $times = Time::get();
-        return view('admin.occupations.create', compact('sections', 'trainers', 'weeks', 'days', 'times'));
+        $directions = [
+            1 => 'Секции единоборств',
+            2 => 'Секции в тренажёрном зале',
+            3 => 'Групповые тренировки'
+        ];
+        return view('admin.occupations.create', compact('trainers', 'weeks', 'days', 'times', 'directions'));
     }
 
     /**
@@ -52,6 +56,7 @@ class OccupController extends Controller
         }else{
             return redirect()->back()->withError('Введите время');
         }
+        $occup->direction_id = $request->direction_id;
         $occup->section_id = $request->section_id;
         $occup->trainer_id = $request->trainer_id;
         $occup->week_id = $request->week_id;
@@ -86,7 +91,12 @@ class OccupController extends Controller
         $weeks = Week::get();
         $days = Day::get();
         $times = Time::get();
-        return view('admin.occupations.edit', compact('occup','sections', 'trainers', 'weeks', 'days', 'times'));
+        $directions = [
+            1 => 'Секции единоборств',
+            2 => 'Секции в тренажёрном зале',
+            3 => 'Групповые тренировки'
+        ];
+        return view('admin.occupations.edit', compact('occup','sections', 'trainers', 'weeks', 'days', 'times', 'directions'));
     }
 
     /**
@@ -104,6 +114,7 @@ class OccupController extends Controller
         }else{
             return redirect()->back()->withError('Введите время');
         }
+        $occup->direction_id = $request->direction_id;
         $occup->section_id = $request->section_id;
         $occup->trainer_id = $request->trainer_id;
         $occup->week_id = $request->week_id;

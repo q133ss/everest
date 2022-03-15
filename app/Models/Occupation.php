@@ -28,4 +28,14 @@ class Occupation extends Model
     public function trainer(){
         return $this->hasOne(Trainer::class, 'id', 'trainer_id');
     }
+
+    public function direction($id){
+        $directions = [
+            0 => '',
+            1 => 'Секции единоборств',
+            2 => 'Секции в тренажёрном зале',
+            3 => 'Групповые тренировки'
+        ];
+        return $directions[$id];
+    }
 }

@@ -15,4 +15,10 @@ class ScheduleController extends Controller
         $times = Time::get();
         return view('schedule', compact('days', 'times'));
     }
+
+    public function trainer($trainer_id){
+        $days = Day::get();
+        $times = Time::get();
+        return view('schedule', compact('days', 'times', 'trainer_id'));
+    }
 }

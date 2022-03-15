@@ -10,20 +10,21 @@
                     <input type="text" name="time" placeholder="12:00 - 14:00" class="form-control" id="inputEmail4">
                 </div>
 
+                <input type="hidden" name="section_id" value="1">
 
                 <div class="form-group col-md-6">
-                    <label for="inputEmail4" class="col-form-label">Секция</label>
-                    <select name="section_id" id="">
-                        @foreach($sections as $section)
-                            <option value="{{$section->id}}">{{$section->title}}</option>
+                    <label for="inputEmail4" class="col-form-label">Направление</label>
+                    <select name="direction_id" id="">
+                        @foreach($directions as $key => $direction)
+                            <option value="{{$key}}">{{$direction}}</option>
                         @endforeach
                     </select>
                 </div>
 
-
                 <div class="form-group col-md-6">
                     <label for="inputEmail4" class="col-form-label">Тренер</label>
                     <select name="trainer_id" id="">
+                        <option value="0" selected>Отсутсвует</option>
                         @foreach($trainers as $trainer)
                             <option value="{{$trainer->id}}">{{$trainer->name}}</option>
                         @endforeach

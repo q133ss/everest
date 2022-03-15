@@ -42,7 +42,7 @@
                                     </div>
                                     <div class="coaches-item__btns">
                                         <button class="button coaches-item__request" onclick="$('#order_type').val('Запись к тренеру: {{$trainer->name}}')" data-open-modal="request">Записаться</button>
-                                        <a class="button button--outline coaches-item__link" href="./schedule.html">Расписание</a>
+                                        <a class="button button--outline coaches-item__link" href="{{route('schedule.trainer', $trainer->id)}}">Расписание</a>
                                     </div>
                                 </div>
                             </div>

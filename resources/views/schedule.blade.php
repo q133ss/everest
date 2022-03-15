@@ -28,42 +28,32 @@
                     <span style="background-color:#E18181">Цвет</span> Кикбоксинг
                 </li>
             </ul>
-            <form class="schedule-calendar">
-                <div class="schedule-calendar__filters" style="display: none;">
+            <form class="schedule-calendar" id="direction_filter">
+                <div class="schedule-calendar__filters">
                     <div class="schedule-select">
                         <div class="schedule-select__top"> Направления </div>
                         <div class="schedule-select__body">
+                            @if(isset($_GET['direction']))
+                                <label class="schedule-select__field">
+                                    <input class="visually-hidden" onchange="location.href='{{route('schedule')}}'" type="radio" name="direction" value="0">
+                                    <span class="schedule-select__label">Очистить</span>
+                                </label>
+                            @endif
                             <label class="schedule-select__field">
-                                <input class="visually-hidden" type="radio" name="direction" value="1">
-                                <span class="schedule-select__label">BJJ</span>
+                                <input class="visually-hidden" onchange="$('#direction_filter').submit()" type="radio" name="direction" value="1">
+                                <span class="schedule-select__label">Секции единоборств</span>
                             </label>
                             <label class="schedule-select__field">
-                                <input class="visually-hidden" type="radio" name="direction" value="2">
-                                <span class="schedule-select__label">Боевое самбо</span>
+                                <input class="visually-hidden" onchange="$('#direction_filter').submit()" type="radio" name="direction" value="2">
+                                <span class="schedule-select__label">Секции в тренажёрном зале</span>
                             </label>
                             <label class="schedule-select__field">
-                                <input class="visually-hidden" type="radio" name="direction" value="3">
-                                <span class="schedule-select__label">Каратэ</span>
-                            </label>
-                            <label class="schedule-select__field">
-                                <input class="visually-hidden" type="radio" name="direction" value="4">
-                                <span class="schedule-select__label">ММА</span>
-                            </label>
-                            <label class="schedule-select__field">
-                                <input class="visually-hidden" type="radio" name="direction" value="5">
-                                <span class="schedule-select__label">Бокс</span>
-                            </label>
-                            <label class="schedule-select__field">
-                                <input class="visually-hidden" type="radio" name="direction" value="6">
-                                <span class="schedule-select__label">Тайский бокс</span>
-                            </label>
-                            <label class="schedule-select__field">
-                                <input class="visually-hidden" type="radio" name="direction" value="7">
-                                <span class="schedule-select__label">Кикбоксинг</span>
+                                <input class="visually-hidden" onchange="$('#direction_filter').submit()" type="radio" name="direction" value="3">
+                                <span class="schedule-select__label">Групповые тренировки</span>
                             </label>
                         </div>
                     </div>
-                    <div class="schedule-select">
+                    <div class="schedule-select" style="display: none">
                         <div class="schedule-select__top"> Занятия </div>
                         <div class="schedule-select__body">
                             <label class="schedule-select__field">
@@ -80,7 +70,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="schedule-select">
+                    <div class="schedule-select" style="display: none">
                         <div class="schedule-select__top"> Тренеры </div>
                         <div class="schedule-select__body">
                             <label class="schedule-select__field">
@@ -140,11 +130,22 @@
                                                     <div class="tabs-content__th">{{$day->day}}</div>
                                                     @foreach($times as $time)
                                                         @php
-                                                            $oc = App\Models\Occupation::where('day_id', $day->id)->where('time_id', $time->id)->first();
+                                                            if(isset($_GET['direction'])){
+                                                                $oc = App\Models\Occupation::where('day_id', $day->id)->where('time_id', $time->id)->where('direction_id', $_GET['direction'])->first();
+                                                            }else{
+                                                                $oc = App\Models\Occupation::where('day_id', $day->id)->where('time_id', $time->id)->first();
+                                                            }
+                                                            if(isset($trainer_id)){
+                                                                $oc = App\Models\Occupation::where('day_id', $day->id)->where('time_id', $time->id)->where('trainer_id', $trainer_id)->first();
+                                                            }
+
+                                                            if(isset($trainer_id) && isset($_GET['direction'])){
+                                                                $oc = App\Models\Occupation::where('day_id', $day->id)->where('time_id', $time->id)->where('trainer_id', $trainer_id)->where('direction_id', $_GET['direction'])->first();
+                                                            }
                                                         @endphp
                                                     @if($oc != NULL)
-                                                        <div class="tabs-content__td" data-start-time="{{$time->time}}">
-                                                            <span style="background-color:{{$oc->section->color}};"></span>{{$oc->time_spending}} {{$oc->section->title}} Тренер: {{$oc->trainer->name}}
+                                                        <div class="tabs-content__td" style="max-height: 80px" data-start-time="{{$time->time}}">
+                                                            <span style="background-color:{{$oc->section->color}};"></span>{{$oc->time_spending}} @if($oc->direction($oc->direction_id) != '') Направление: {{$oc->direction($oc->direction_id)}} @endif @if($oc->trainer != NULL)Тренер: {{$oc->trainer->name}} @endif
                                                         </div>
                                                     @else
                                                             <div class="tabs-content__td" data-start-time="{{$time->time}}">

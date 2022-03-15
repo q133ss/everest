@@ -57,14 +57,16 @@
                     <textarea class="form-control" name="achievements" id="editor1" cols="30" rows="10">{{$trainer->achievements}}</textarea>
                 </div>
 
-                <div class="form-group col-md-6">
-                    <label for="section" class="col-form-label">Секция</label>
-                    <select name="section_id" id="" class="form-control">
-                        @foreach($sections as $section)
-                            <option value="{{$section->id}}" @if($section->id == $trainer->section_id) selected @endif>{{$section->title}}</option>
-                        @endforeach
-                    </select>
-                </div>
+{{--                <div class="form-group col-md-6">--}}
+{{--                    <label for="section" class="col-form-label">Секция</label>--}}
+{{--                    <select name="section_id" id="" class="form-control">--}}
+{{--                        @foreach($sections as $section)--}}
+{{--                            <option value="{{$section->id}}" @if($section->id == $trainer->section_id) selected @endif>{{$section->title}}</option>--}}
+{{--                        @endforeach--}}
+{{--                    </select>--}}
+{{--                </div>--}}
+
+                <input type="hidden" name="section_id" value="1">
 
                 <div class="form-group col-md-6">
                     <button type="submit" class="btn btn-success">Изменить</button>
